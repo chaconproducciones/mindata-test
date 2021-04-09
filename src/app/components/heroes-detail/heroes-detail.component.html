@@ -1,0 +1,29 @@
+<div class="flex-column w-100">
+    <div class="w-100">
+        <h1>{{labelsTitles.title}}</h1>
+    </div>
+    <div class="w-100">
+        <h2>{{labelsTitles.subtitle}}</h2>
+    </div>
+</div>
+<div class="flex-column m-lon-15" [formGroup]="heroeForm">
+    <mat-form-field appearance="legacy">
+        <mat-label>Nombre</mat-label>
+        <input formControlName="name" appUpperCase matInput placeholder="Nombre de Heroe">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+        <mat-label>Descripción</mat-label>
+        <input formControlName="description" matInput placeholder="Descripción de Heroe">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+        <mat-label>Origen</mat-label>
+        <input formControlName="origin" matInput placeholder="Origen de creación">
+    </mat-form-field>
+
+    <div class="flex-row flex-end m-lon-15">
+        <button class="ml-rem-1" mat-raised-button (click)="goToHome()">Salir</button>
+        <button class="ml-rem-1" mat-raised-button color="primary" (click)="saveHeroe(heroeForm.value)" [disabled]="heroeForm.invalid">Guardar</button>
+    </div>
+</div>

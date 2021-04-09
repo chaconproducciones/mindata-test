@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<mat-dialog-content class="mat-typography h-rem-8">
+    <h3>{{subtitle}}</h3>
+    <ng-container *ngIf="isConfirmation; else isAlert">
+        <mat-dialog-actions align="end">
+            <button class="m-lon-rem-1" mat-raised-button color="basic" mat-dialog-close>No</button>
+            <button mat-raised-button [mat-dialog-close]="true" color="primary" cdkFocusInitial>Si</button>
+        </mat-dialog-actions>
+    </ng-container>
+</mat-dialog-content>
+<ng-template #isAlert>
+    <mat-dialog-actions align="end">
+        <button class="m-lon-rem-1" mat-raised-button mat-dialog-close>Cerrar</button>
+    </mat-dialog-actions>
+</ng-template>

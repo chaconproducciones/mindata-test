@@ -1,0 +1,14 @@
+<div class="flex-row w-100 hrem-4 p-lat-rem-15 flex-between">
+    <app-search (sendFind)="findHeroe($event)"></app-search>
+    <div class="flex-column justify-center">
+        <div class="flex-row h-100">
+            <label class="m-auto text-end ">Agregar nuevo heroe</label>
+            <button class="ml-rem-1 h-100" mat-raised-button color="primary" (click)="newHeroe()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>
+
+<app-heroes-list [heroes]="heroesFilter" (editHeroeEvent)="editHeroe($event)" (deleteHeroeEvent)="deleteHeroe($event)">
+</app-heroes-list>

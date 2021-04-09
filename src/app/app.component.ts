@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'mindata-prueba-tecnica';
+
+  public titleToolbar: string = 'Heroes MinData';
+
 }

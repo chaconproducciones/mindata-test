@@ -1,1 +1,138 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.overlay {
+    position:fixed;
+    display:block;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color:rgba(124, 124, 124, 0.535);
+    z-index:99999;
+}
+
+.spinner {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.hrem-4 {
+    height: 4rem;
+}
+
+.hrem-2 {
+    height: 2rem;
+}
+
+.bg-soft {
+    background-color: rgb(176, 228, 255);
+}
+
+.p-10{
+    padding: 1rem;
+}
+
+.p-lat-rem-15{
+    padding: 1rem 0;
+}
+
+.card {
+    border-radius: 25px;
+}
+
+.m-lon-15 {
+    margin: 1% 5%;
+}
+
+.m-lon-rem-1 {
+    margin: 0 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-end{
+    justify-content: flex-end;
+}
+
+.h-100{
+    height: 100%!important;
+}
+
+.mb-rem-1{
+    margin-bottom: 1rem;
+}
+
+.ml-rem-1 {
+    margin-left: 1rem!important;
+}
+
+.m-auto {
+    margin: auto;
+}
+.justify-center {
+    justify-content: center;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.h-rem-10 {
+    height: 10rem;
+}
+
+.h-rem-8 {
+    height: 8rem;
+}
+
+.w-rem-30 {
+    width: 30rem!important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+
+
+

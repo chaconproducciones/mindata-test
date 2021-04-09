@@ -1,0 +1,35 @@
+<div class="mat-elevation-z8 w-100 text-center">
+    <table mat-table [dataSource]="heroesSource" class="w-100" >
+      <ng-container matColumnDef="title">
+        <th *matHeaderCellDef class="fw-500"> Nombre </th>
+        <td class="fw-300" *matCellDef="let element"> {{element?.name}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="description">
+        <th  *matHeaderCellDef class="fw-500"> Descripción </th>
+        <td class="fw-300" *matCellDef="let element"> {{element?.description}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="origin">
+        <th *matHeaderCellDef class="fw-500"> Origen </th>
+        <td class="fw-300" *matCellDef="let element"> {{element?.origin}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th *matHeaderCellDef class="fw-500"> Actions </th>
+        <td class="fw-300 text-center" *matCellDef="let element"> 
+            <button class="m-lon-rem-1" mat-icon-button (click)="goDetail(element)">
+                <mat-icon>edit</mat-icon>
+             </button>
+             <button class="m-lon-rem-1" mat-icon-button (click)="deleteHeroe(element)">
+              <mat-icon>delete</mat-icon>
+           </button>    
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
